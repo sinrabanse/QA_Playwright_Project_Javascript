@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test.describe.only("loginEmptyUserEmptyPassword", () => {
+test.describe("loginEmptyUserEmptyPassword", () => {
   const baseURL = "https://www.saucedemo.com/inventory.html";
 
   test("Valid", async ({ page }) => {
