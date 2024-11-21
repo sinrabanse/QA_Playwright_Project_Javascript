@@ -1,9 +1,14 @@
 import { expect, test } from "@playwright/test";
+import {
+  baseURL,
+  standard_user,
+  password,
+} from "/Users/sinrabanse/PlayWrightProject/utils/testData.js";
 
-test.describe("sanityTest1", () => {
-  const baseURL = "https://www.saucedemo.com/inventory.html";
-  const standard_user = "standard_user";
-  const password = "secret_sauce";
+test.describe.only("sanityTest1", () => {
+  //const baseURL = "https://www.saucedemo.com/inventory.html";
+  //const standard_user = "standard_user";
+  //const password = "secret_sauce";
 
   test("Valid", async ({ page }) => {
     const username_field = page.locator('[data-test="username"]');
