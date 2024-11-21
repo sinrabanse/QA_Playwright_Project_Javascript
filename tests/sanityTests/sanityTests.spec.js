@@ -5,7 +5,7 @@ import {
   password,
 } from "/Users/sinrabanse/PlayWrightProject/utils/testData.js";
 
-test.describe.only("sanityTest1", () => {
+test.describe("sanityTest1", () => {
   //const baseURL = "https://www.saucedemo.com/inventory.html";
   //const standard_user = "standard_user";
   //const password = "secret_sauce";
