@@ -1,20 +1,16 @@
-import { expect, test } from "@playwright/test";
+import {expect, test} from '@playwright/test'
+import {testData} from '../../utils/testData.js'
+import {testLocators} from '../../utils/testLocators.js'
+import {websiteURL} from '../../utils/testURL.js'
 
-test.describe("loginErrorUser", () => {
-  const baseURL = "https://www.saucedemo.com/inventory.html";
-  const error_user = "error_user";
-  const password = "secret_sauce";
+test.describe('loginErrorUser', () => {
+    test('Valid', async ({page}) => {
+        const error_user = 'error_user'
 
-  test("Valid", async ({ page }) => {
-    const username_field = page.locator('[data-test="username"]');
-    const password_field = page.locator('[data-test="password"]');
-    const login_button = page.locator('[data-test="login-button"]');
-    const title_page_locator = page.locator('//span[@class="title"]');
-
-    await page.goto(baseURL);
-    await username_field.fill(error_user);
-    await password_field.fill(password);
-    await login_button.click();
-    await expect(title_page_locator).toHaveText("Products");
-  });
-});
+        await page.goto(websiteURL.baseURL)
+        await testLocators.username_field.fill(error_user)
+        await testLocators.password_field.fill(testData.password)
+        await testLocators.login_button.click()
+        await expect(testLocators.title_page_locator).toHaveText('Products')
+    })
+})
