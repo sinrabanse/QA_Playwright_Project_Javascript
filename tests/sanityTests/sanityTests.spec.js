@@ -1,9 +1,5 @@
 import { expect, test } from "@playwright/test";
-import {
-  baseURL,
-  standard_user,
-  password,
-} from "/Users/sinrabanse/PlayWrightProject/utils/testData.js";
+import { baseURL, standard_user, password } from "../utils/testData.js";
 
 test.describe("sanityTest1", () => {
   //const baseURL = "https://www.saucedemo.com/inventory.html";
