@@ -10,6 +10,7 @@ test.describe("sanityTest1", () => {
   //const standard_user = "standard_user";
   //const password = "secret_sauce";
 
+  //test
   test("Valid", async ({ page }) => {
     const username_field = page.locator('[data-test="username"]');
     const password_field = page.locator('[data-test="password"]');
