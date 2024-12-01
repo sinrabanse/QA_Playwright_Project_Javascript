@@ -35,10 +35,6 @@ This repository contains automated tests written in JavaScript using [Playwright
    git clone https://github.com/sinrabanse/QA_Playwright_Project_Javascript.git
    cd QA_Playwright_Project_Javascript
 
-2. Install dependencies:
-   ```bash
-   npm install -r requirements.txt
-
 ## Running Tests
 
 1. Run all tests:
